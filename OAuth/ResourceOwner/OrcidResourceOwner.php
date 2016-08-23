@@ -9,7 +9,7 @@
  */
 namespace HWI\Bundle\OAuthBundle\OAuth\ResourceOwner;
 use HWI\Bundle\OAuthBundle\Security\Core\Authentication\Token\OAuthToken;
-use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 /**
  * OrcidResourceOwner
  *
@@ -55,7 +55,7 @@ class OrcidResourceOwner extends GenericOAuth2ResourceOwner
     /**
      * {@inheritDoc}
      */
-    protected function configureOptions(OptionsResolver $resolver)
+    protected function configureOptions(OptionsResolverInterface $resolver)
     {
         parent::configureOptions($resolver);
         $resolver->setDefaults(array(
